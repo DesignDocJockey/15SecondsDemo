@@ -1,0 +1,28 @@
+﻿@model CalculationInputs
+@{
+    ViewBag.Title = "Calculator";
+}
+
+<div id="inputForm">
+
+    @using (Html.BeginForm("Index", "App", FormMethod.Post))
+    {
+        <label asp-for="InputValueOne">Input#1:</label>
+        <input type="text" asp-for="InputValueOne" />
+        <br />
+        <label asp-for="InputValueTwo">Input#2:</label>
+        <input type="text" asp-for="InputValueTwo" />
+        <br />
+        <label asp-for="InputValueThree">Input#3:</label>
+        <input type="text" asp-for="InputValueThree" />
+        <br />
+        <label asp-for="InputValueFour">Input#4:</label>
+        <input type="text" asp-for="InputValueFour" />
+        <br />
+        <input type="submit" value="Calculate" />
+
+        <br />
+        <div>@ViewBag.UserMessage</div>
+    }
+
+</div>
